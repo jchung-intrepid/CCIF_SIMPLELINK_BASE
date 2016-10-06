@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="SpyCCode.c" />
+    <ClCompile Include="CCIF_SimpleLink_Base.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="vspy.c" />
+    <ClCompile Include="simplelink\common\jsmn.c">
+      <Filter>simplelink\common</Filter>
+    </ClCompile>
+    <ClCompile Include="simplelink\source\flowcont.c">
+      <Filter>simplelink\source</Filter>
+    </ClCompile>
+    <ClCompile Include="simplelink\source\fs.c">
+      <Filter>simplelink\source</Filter>
+    </ClCompile>
+    <ClCompile Include="simplelink\source\netapp.c">
+      <Filter>simplelink\source</Filter>
+    </ClCompile>
+    <ClCompile Include="simplelink\source\netcfg.c">
+      <Filter>simplelink\source</Filter>
+    </ClCompile>
+    <ClCompile Include="simplelink\source\nonos.c">
+      <Filter>simplelink\source</Filter>
+    </ClCompile>
+    <ClCompile Include="simplelink\source\socket.c">
+      <Filter>simplelink\source</Filter>
+    </ClCompile>
+    <ClCompile Include="simplelink\source\spawn.c">
+      <Filter>simplelink\source</Filter>
+    </ClCompile>
+    <ClCompile Include="simplelink\source\wlan.c">
+      <Filter>simplelink\source</Filter>
+    </ClCompile>
+    <ClCompile Include="simplelink\source\device.c">
+      <Filter>simplelink\source</Filter>
+    </ClCompile>
+    <ClCompile Include="simplelink\source\driver.c">
+      <Filter>simplelink\source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="vspy.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="simplelink\common\jsmn.h">
+      <Filter>simplelink\common</Filter>
+    </ClInclude>
+    <ClInclude Include="simplelink\common\sl_common.h">
+      <Filter>simplelink\common</Filter>
+    </ClInclude>
+    <ClInclude Include="simplelink\include\netcfg.h">
+      <Filter>simplelink\include</Filter>
+    </ClInclude>
+    <ClInclude Include="simplelink\include\simplelink.h">
+      <Filter>simplelink\include</Filter>
+    </ClInclude>
+    <ClInclude Include="simplelink\include\slosi.h">
+      <Filter>simplelink\include</Filter>
+    </ClInclude>
+    <ClInclude Include="simplelink\include\slstudio.h">
+      <Filter>simplelink\include</Filter>
+    </ClInclude>
+    <ClInclude Include="simplelink\include\socket.h">
+      <Filter>simplelink\include</Filter>
+    </ClInclude>
+    <ClInclude Include="simplelink\include\trace.h">
+      <Filter>simplelink\include</Filter>
+    </ClInclude>
+    <ClInclude Include="simplelink\include\user.h">
+      <Filter>simplelink\include</Filter>
+    </ClInclude>
+    <ClInclude Include="simplelink\include\wlan.h">
+      <Filter>simplelink\include</Filter>
+    </ClInclude>
+    <ClInclude Include="simplelink\include\wlan_rx_filters.h">
+      <Filter>simplelink\include</Filter>
+    </ClInclude>
+    <ClInclude Include="simplelink\include\device.h">
+      <Filter>simplelink\include</Filter>
+    </ClInclude>
+    <ClInclude Include="simplelink\include\fs.h">
+      <Filter>simplelink\include</Filter>
+    </ClInclude>
+    <ClInclude Include="simplelink\include\netapp.h">
+      <Filter>simplelink\include</Filter>
+    </ClInclude>
+    <ClInclude Include="simplelink\source\flowcont.h">
+      <Filter>simplelink\source</Filter>
+    </ClInclude>
+    <ClInclude Include="simplelink\source\nonos.h">
+      <Filter>simplelink\source</Filter>
+    </ClInclude>
+    <ClInclude Include="simplelink\source\objInclusion.h">
+      <Filter>simplelink\source</Filter>
+    </ClInclude>
+    <ClInclude Include="simplelink\source\protocol.h">
+      <Filter>simplelink\source</Filter>
+    </ClInclude>
+    <ClInclude Include="simplelink\source\spawn.h">
+      <Filter>simplelink\source</Filter>
+    </ClInclude>
+    <ClInclude Include="simplelink\source\driver.h">
+      <Filter>simplelink\source</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CCIF_SimpleLink_Base.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CCIF_SimpleLink_Base.def" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="simplelink">
+      <UniqueIdentifier>{fc84cd27-c485-44b5-b5c8-d793537d449b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="simplelink\include">
+      <UniqueIdentifier>{b7408af3-1cb6-4de3-a252-892102f85085}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="simplelink\common">
+      <UniqueIdentifier>{00c8237b-b83d-4280-aca4-342cf19d93e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="simplelink\source">
+      <UniqueIdentifier>{fe4efeb9-e490-456e-867d-4a22d52529e3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
