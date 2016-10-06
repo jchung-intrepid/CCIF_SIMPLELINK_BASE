@@ -127,7 +127,7 @@ _i16 __cdecl sl_Start(const void* pIfHdl, _i8*  pDevName, const P_INIT_CALLBACK 
         return SL_POOL_IS_EMPTY;
     }
 
-    if( g_pCB->FD >= (_SlFd_t)0)
+    if( g_pCB->FD > (_SlFd_t)0)
     {
         sl_DeviceDisable();
 
