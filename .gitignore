@@ -1,2 +1,10 @@
 #Backups
 *.bak
+
+#Visual Studio
+*.sdf
+*.v12.suo
+
+#Target Folders
+Debug/*
+Release/*
