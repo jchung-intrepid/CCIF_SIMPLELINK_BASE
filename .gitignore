@@ -4,6 +4,11 @@
 #Visual Studio
 *.sdf
 *.v12.suo
+*.exp
+*.ilk
+*.pdb
+CCIF_SimpleLink_Base.dll
+CCIF_SimpleLink_Base.lib
 
 #Target Folders
 Debug/*
