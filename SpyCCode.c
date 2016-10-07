@@ -88,6 +88,7 @@ typedef enum { /* Application specific status/error codes */
 }e_AppStatusCodes;
 
 _u8 g_Status = 0;
+_u8 is_cc3100_connected = 0;
 
 // TODO: add event handlers here
 
@@ -124,9 +125,12 @@ void Spy_Stopped()
 	// TODO: add stopped code
 	_i32 retVal = -1;
 
-	retVal = sl_Stop(SL_STOP_TIMEOUT);
-	if (retVal < 0)
-		LOOP_FOREVER();
+	if (is_cc3100_connected)
+	{
+		retVal = sl_Stop(SL_STOP_TIMEOUT);
+		if (retVal < 0)
+			LOOP_FOREVER();
+	}
 }
 
 void Spy_KeyPress(int iKey, int iCTRLPressed, int iALTPressed)
@@ -162,12 +166,15 @@ void Spy_BeforeStarted()
 	retVal = configureSimpleLinkToDefaultState();
 	if (retVal < 0)
 	{
-		if (DEVICE_NOT_IN_STATION_MODE == retVal)
-		{
-			CLI_Write(" Failed to configure the device in its default state \n\r");
-		}
+		CLI_Write(" Failed to configure the device in its default state \n\r");
+
+		CLI_Write(" Is CC3100 Boosterpack powered? \n\r");
+
+		main_state = eMAIN_STATE_IDLE;
 
 		LOOP_FOREVER();
+
+		return;
 	}
 
 	CLI_Write(" Device is configured in default state \n\r");
@@ -182,10 +189,17 @@ void Spy_BeforeStarted()
 		(ROLE_STA != retVal))
 	{
 		CLI_Write(" Failed to start the device \n\r");
+
+		main_state = eMAIN_STATE_IDLE;
+
 		LOOP_FOREVER();
+
+		return;
 	}
 
 	CLI_Write(" Device started as STATION \n\r");
+
+	is_cc3100_connected = 1;
 
 	main_state = eMAIN_STATE_CC3100_CONNECT_TO_AP;
 }
@@ -384,6 +398,7 @@ _i32 __cdecl establishConnectionWithAP()
 _i32 __cdecl initializeAppVariables()
 {
 	g_Status = 0;
+	is_cc3100_connected = 0;
 	main_state = eMAIN_STATE_IDLE;
 
 	return SUCCESS;
